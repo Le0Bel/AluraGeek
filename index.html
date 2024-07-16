@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AluraGeek</title>
+</head>
+<body>
+    <header>
+        <img src="./images/hearts-logo.png" alt="hearts images">
+        <h1 class="header-title">AluraGeek</h1>
+    </header>
+    
+
+        <main class="main-container">
+            <section class="left">
+                <h2>Mis productos</h2>
+                <div class="cards-container" id="cards-container" data-list>
+                    <div class="card" id="card"></div>
+                </div>
+            </section>
+            
+            <section class="right">
+                <h2>AGREGAR PRODUCTO:</h2>
+                <form id="add-product">
+                    <input type="text" class="form-input" id="name" name="name" placeholder="nombre..." required>
+                    <input type="text" class="form-input" id="price" name="price" placeholder="precio..." required>
+                    <input type="text" class="form-input" id="image" name="image" placeholder="imagen..." required>
+                    <div class="btn-container">
+                        <button type="submit" class="btn-enviar btn">Enviar</button>
+                        <button type="reset" class="btn-limpiar btn" >Limpiar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="logo-info">
+                <img src="./images/hearts-logo.png" alt="hearts images">
+                <h1 class="header-title">AluraGeek</h1>
+            </div>
+            <div class="developer-info">
+                <p>Desarrollado por Leonardo Bellomo</p>
+                <p>- 2024 - </p>
+            </div>
+        </footer>
+<script src="app.js" type="module"></script>
+</body>
+</html>
