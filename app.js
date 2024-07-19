@@ -10,7 +10,7 @@ const inputImage = document.getElementById("image")
  
 
 async function listarCards() {
-    const conexion = await fetch("http://localhost:3001/cards")
+    const conexion = await fetch("http://localhost:3000/cards")
     const conexionConvertida = await conexion.json()
 
     return conexionConvertida
@@ -43,12 +43,15 @@ async function listar() {
     elementsArray.forEach((el)=> el.addEventListener("click", handleDelete ))
     
     
+    
+       
+    
 }
 
 
 
 async function createCard(imgUrl,name, price) {
-    const conexion = await fetch("http://localhost:3001/cards", {
+    const conexion = await fetch("http://localhost:3000/cards", {
         method:"POST",
         headers: {"Content-type" : "application/json"},
         body: JSON.stringify({
@@ -70,12 +73,18 @@ addProduct.addEventListener('submit', async function(e) {
     await createCard(inputImage.value,inputName.value,inputPrice.value)
 })
 
+
+    
 async function deleteCard(id) {
-    const conexion = await fetch(`http://localhost:3001/cards/${id}`,{method:"DELETE"})
+    const conexion = await fetch(`http://localhost:3000/cards/${id}`,{method:"DELETE"})
 
     const conexionConvertida = conexion.json()
     return conexionConvertida
 }
 
 
+
+
 /* <img src="http://img3.wikia.nocookie.net/__cb20100317190512/starwars/images/0/0c/Stormtrooper_Commando.jpg"/> */
+
+

@@ -16,8 +16,9 @@ html {
 body {
     font-family: "Press Start 2P", system-ui;
     font-style: normal;
-    min-height: 100%;
-    border: 2px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -34,24 +35,26 @@ header{
 
 .main-container {
     display: flex;
-    min-height: 100%;
+    flex: auto;
 }
 
 .left,
 .right {
-    border: 1px solid blue;
-    min-height: 800px;
+    min-height: 450px;
     text-align: center;
     padding-top: 2em;
 }
 
 
 .left {
-    width: 60%;    
+    width: 70%;    
 }
 
 .left h2 {
     margin-bottom: 2em;
+}
+.right {
+    width: 30%;
 }
 
 /* Cards */
@@ -60,24 +63,22 @@ header{
     padding: 2em;
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .card-container {
     background-color: #5D04D9;
     font-family: "IBM Plex Mono", monospace;
     width: 250px;
-    height: 350px;
-    padding: 1.5em;
+    height: 370px;
+    padding-top: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 5px solid #2d006b;
     border-radius: 15px;
-    color: white;
-    margin-bottom: 1em;
-    margin-right: 1em;
-    justify-content: space-around;
+    color: white;   
+    margin: 0 auto 1em;
+    
 }
 
 .card-container img {
@@ -86,12 +87,12 @@ header{
     margin-bottom: 0.5em;
     width: 230px;
     object-fit: cover;
-    
 }
 
 .card-container--info {
     width: 100%;
     text-align: left;
+    padding: 0.1em 1em;
 }
 
 .card-container--value {
@@ -119,6 +120,10 @@ header{
     background-color: white;
     color: #2d006b;
     border: 3px solid #2d006b;
+}
+
+.card-center {
+    margin: 0 auto;
 }
 
 /* Main - Right Side */
@@ -210,6 +215,35 @@ footer {
 
 .developer-info { 
     text-align: center;   
-    padding: 0.3em;
+    padding:   0.3em;
+    padding-top: 0;
     font-family: "IBM Plex Sans", sans-serif;
 }
+
+/* Responsiva 600px */
+
+@media (max-width: 1000px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-container {
+        margin: 0 auto 1em;
+    }
+    .left,.right {
+        width: 100%;
+    }
+
+    .form-input {
+        max-width: 500px;
+    }
+  }
+
+@media (max-width:1135px) {
+    .cards-container {
+        justify-content: center;
+        
+    }
+    
+  }

@@ -3,8 +3,14 @@
     {
       "id": "2a9c2ce5-c2b9-4c4a-b15c-cd0dc0984ae6",
       "imgUrl": "http://img3.wikia.nocookie.net/__cb20100317190512/starwars/images/0/0c/Stormtrooper_Commando.jpg",
-      "name": "ds",
-      "price": "ds"
+      "name": "Tarjeta 2",
+      "price": "80"
+    },
+    {
+      "id": "2a9c2ce5-c2b9-4c4a-b15c-cd0dc0984ae6",
+      "imgUrl": "http://img3.wikia.nocookie.net/__cb20100317190512/starwars/images/0/0c/Stormtrooper_Commando.jpg",
+      "name": "Tarjeta 3",
+      "price": "220"
     }
   ]
 }
